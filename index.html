@@ -19,22 +19,15 @@
 
         .form-container {
             display: flex;
-            justify-content: space-between;
-            width: 80%;
-            max-width: 1200px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 800px;
             padding: 40px;
             background-color: #1e1e1e;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .form-left {
-            flex: 1;
-            margin-right: 30px;
-        }
-
-        .form-right {
-            flex: 2;
         }
 
         h1 {
@@ -45,17 +38,17 @@
 
         label {
             display: block;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
+            font-size: 1rem;
+            margin-bottom: 8px;
             color: #bbb;
         }
 
         input, textarea {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             margin-bottom: 20px;
             background-color: #2e2e2e;
-            border: none;
+            border: 1px solid #444;
             border-radius: 8px;
             color: #fff;
             font-size: 1rem;
@@ -63,7 +56,7 @@
 
         input[type="radio"], input[type="checkbox"] {
             width: auto;
-            margin-right: 10px;
+            margin-right: 8px;
         }
 
         textarea {
@@ -73,9 +66,11 @@
 
         .form-group {
             margin-bottom: 20px;
+            width: 100%;
         }
 
         .submit-btn {
+            width: 100%;
             padding: 12px 20px;
             background-color: #ffcc00;
             color: #222;
@@ -92,73 +87,63 @@
             background-color: #e6b800;
         }
 
-        .form-left label, .form-left input[type="radio"], .form-left input[type="checkbox"] {
+        .section-title {
+            font-size: 1.2rem;
             margin-bottom: 10px;
+            color: #f4f4f4;
         }
 
-        .form-left input[type="radio"], .form-left input[type="checkbox"] {
-            margin-top: 5px;
-        }
-
-        .timeframe-options, .project-options {
-            margin-bottom: 30px;
-        }
-
-        .form-container div {
+        .inline-group {
             display: flex;
-            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
         }
-
     </style>
 </head>
 <body>
     <div class="form-container">
+        <h1>Let's Build Your Future</h1>
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd0Ae7tfztAP3X5JZzsgqNSlVdLa1XxEccv_k7rlioVFaWQ5A/formResponse" method="POST">
-            <div class="form-left">
-                <h1>Let's Build Your Future</h1>
-                <div class="timeframe-options">
-                    <label>Timeframe</label>
-                    <label><input type="radio" name="entry.167154083" value="1 month"> 1 month</label>
-                    <label><input type="radio" name="entry.167154083" value="2-3 months"> 2-3 months</label>
-                    <label><input type="radio" name="entry.167154083" value="4+ months"> 4+ months</label>
-                </div>
-
-                <div class="project-options">
-                    <label>Project Type</label>
-                    <label><input type="checkbox" name="entry.2101354015" value="Desktop"> Desktop</label>
-                    <label><input type="checkbox" name="entry.2101354015" value="Web"> Web</label>
-                    <label><input type="checkbox" name="entry.2101354015" value="Mobile"> Mobile</label>
-                    <label><input type="checkbox" name="entry.2101354015" value="Other"> Other</label>
-                </div>
+            <!-- Timeframe Section -->
+            <div class="form-group">
+                <p class="section-title">Timeframe</p>
+                <label><input type="radio" name="entry.167154083" value="1 month"> 1 month</label>
+                <label><input type="radio" name="entry.167154083" value="2-3 months"> 2-3 months</label>
+                <label><input type="radio" name="entry.167154083" value="4+ months"> 4+ months</label>
             </div>
 
-            <div class="form-right">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="entry.66836812" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" name="entry.1914982633" placeholder="Enter your company">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="entry.505683355" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="phone" id="phone" name="entry.419897202" placeholder="Enter your phone number" required>
-                </div>
-                <div class="form-group">
-                    <label for="budget">Budget</label>
-                    <input type="text" id="budget" name="entry.1919071209" placeholder="Enter your budget">
-                </div>
-                <div class="form-group">
-                    <label for="message">Tell us about your project</label>
-                    <textarea id="message" name="message" placeholder="Enter project details"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>   
+            <!-- Project Type Section -->
+            <div class="form-group">
+                <p class="section-title">Project Type</p>
+                <label><input type="checkbox" name="entry.2101354015" value="Desktop"> Desktop</label>
+                <label><input type="checkbox" name="entry.2101354015" value="Web"> Web</label>
+                <label><input type="checkbox" name="entry.2101354015" value="Mobile"> Mobile</label>
+                <label><input type="checkbox" name="entry.2101354015" value="Other"> Other</label>
             </div>
+
+            <!-- Personal Details Section -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="entry.66836812" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="entry.12345678" placeholder="Enter your company">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="entry.514364544" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="budget">Budget</label>
+                <input type="text" id="budget" name="entry.87654321" placeholder="Enter your budget">
+            </div>
+            <div class="form-group">
+                <label for="message">Tell us about your project</label>
+                <textarea id="message" name="entry.123123123" placeholder="Enter project details"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
         </form>
     </div>
 </body>
