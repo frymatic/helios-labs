@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Build Your Future</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            padding: 40px;
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .form-left {
+            flex: 1;
+            margin-right: 30px;
+        }
+
+        .form-right {
+            flex: 2;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f4f4f4;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #bbb;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background-color: #2e2e2e;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .submit-btn {
+            padding: 12px 20px;
+            background-color: #ffcc00;
+            color: #222;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #e6b800;
+        }
+
+        .form-left label, .form-left input[type="radio"], .form-left input[type="checkbox"] {
+            margin-bottom: 10px;
+        }
+
+        .form-left input[type="radio"], .form-left input[type="checkbox"] {
+            margin-top: 5px;
+        }
+
+        .timeframe-options, .project-options {
+            margin-bottom: 30px;
+        }
+
+        .form-container div {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-left">
+            <h1>Let's Build Your Future</h1>
+            <div class="timeframe-options">
+                <label>Timeframe</label>
+                <label><input type="radio" name="timeframe" value="1 month"> 1 month</label>
+                <label><input type="radio" name="timeframe" value="2-3 months"> 2-3 months</label>
+                <label><input type="radio" name="timeframe" value="4+ months"> 4+ months</label>
+            </div>
+
+            <div class="project-options">
+                <label>Project Type</label>
+                <label><input type="checkbox" name="project-type" value="Desktop"> Desktop</label>
+                <label><input type="checkbox" name="project-type" value="Web"> Web</label>
+                <label><input type="checkbox" name="project-type" value="Mobile"> Mobile</label>
+                <label><input type="checkbox" name="project-type" value="Other"> Other</label>
+            </div>
+        </div>
+
+        <div class="form-right">
+            <form action="YOUR_FORM_URL" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Enter your company">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget</label>
+                    <input type="text" id="budget" name="budget" placeholder="Enter your budget">
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about your project</label>
+                    <textarea id="message" name="message" placeholder="Enter project details"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
