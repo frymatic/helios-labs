@@ -113,26 +113,26 @@
 </head>
 <body>
     <div class="form-container">
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd0Ae7tfztAP3X5JZzsgqNSlVdLa1XxEccv_k7rlioVFaWQ5A/formResponse" method="POST">
-            <div class="form-left">
-                <h1>Let's Build Your Future</h1>
-                <div class="timeframe-options">
-                    <label>Timeframe</label>
-                    <label><input type="radio" name="entry.167154083" value="1 month"> 1 month</label>
-                    <label><input type="radio" name="entry.167154083" value="2-3 months"> 2-3 months</label>
-                    <label><input type="radio" name="entry.167154083" value="4+ months"> 4+ months</label>
-                </div>
-
-                <div class="project-options">
-                    <label>Project Type</label>
-                    <label><input type="checkbox" name="entry.2101354015" value="Desktop"> Desktop</label>
-                    <label><input type="checkbox" name="entry.2101354015" value="Web"> Web</label>
-                    <label><input type="checkbox" name="entry.2101354015" value="Mobile"> Mobile</label>
-                    <label><input type="checkbox" name="entry.2101354015" value="Other"> Other</label>
-                </div>
+        <div class="form-left">
+            <h1>Let's Build Your Future</h1>
+            <div class="timeframe-options">
+                <label>Timeframe</label>
+                <label><input type="radio" name="entry.167154083" value="1 month"> 1 month</label>
+                <label><input type="radio" name="entry.167154083" value="2-3 months"> 2-3 months</label>
+                <label><input type="radio" name="entry.167154083" value="4+ months"> 4+ months</label>
             </div>
 
-            <div class="form-right">
+            <div class="project-options">
+                <label>Project Type</label>
+                <label><input type="checkbox" name="entry.2101354015" value="Desktop"> Desktop</label>
+                <label><input type="checkbox" name="entry.2101354015" value="Web"> Web</label>
+                <label><input type="checkbox" name="entry.2101354015" value="Mobile"> Mobile</label>
+                <label><input type="checkbox" name="entry.2101354015" value="Other"> Other</label>
+            </div>
+        </div>
+
+        <div class="form-right">
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd0Ae7tfztAP3X5JZzsgqNSlVdLa1XxEccv_k7rlioVFaWQ5A/formResponse" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="entry.66836812" placeholder="Enter your name" required>
@@ -155,11 +155,11 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Tell us about your project</label>
-                    <textarea id="message" name="entry.1618654423" placeholder="Enter project details"></textarea>
+                    <textarea id="message" name="message" placeholder="Enter project details"></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Submit</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 </html>
